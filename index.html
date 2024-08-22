@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo App</title>
+  </head>
+
+  <body>
+    <!-- Toast Alert -->
+    <p id="toastAlert" class="toast-alert"></p>
+
+    <div class="container">
+      <div class="stats-container">
+        <div class="details">
+          <h1>To-Do List</h1>
+          <p class="completion-message" style="visibility: none;" >Keep it up!</p>
+
+          <div id="progressBar" title="progressBar">
+            <div id="progress"></div>
+          </div>
+        </div>
+        <div class="stats-number" title="count">
+          <p id="numbers">0/0</p>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Enter your task" title="input field"/>
+        <button id="addBtn" title="Add task">+</button>
+        <button id="saveBtn" title="Update Task" style="display: none">
+          <img src="images/save.png" class="reload-img" />
+        </button>
+      </div>
+
+      <p id="error-message" class="error-message"></p>
+
+      <div class="tabs">
+        <button class="tab_btn" title="All">All Tasks</button>
+        <button class="tab_btn" title="Assigned">Assigned</button>
+        <button class="tab_btn" title="Completed">Completed</button>
+        
+      </div>
+
+      <div class="task-container">
+        <div class="task"></div>
+      </div>
+    </div>
+    <div class="clear-buttons">
+      <button id="clearAllBtn" title="Clear All">Clear All</button>
+      <button id="clearCompletedBtn" title="Clear Completed">Clear Completed</button>
+    </div>
+    <div id="errorModal" class="modal-container">
+      <div class="modal">
+        <h3 id="modal-heading">Alert</h3> 
+        <hr>
+        <p id="modal-text"></p>
+        <div class="modal-buttons">
+          <button id="modal-btn-cancel">Cancel</button>
+          <button id="modal-btn-okay">Delete</button>
+         
+        </div>
+      </div>
+    </div>
+    <script src="script.js" ></script>
+  </body>
+</html>
